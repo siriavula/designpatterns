@@ -17,10 +17,6 @@ public class GuestList {
         return this.people;
     }
     
-    public void setList(ArrayList<String> aPeople) {
-        this.people = aPeople;
-    }
-
     public boolean add(String aTitle) {
         return true;  
     }
