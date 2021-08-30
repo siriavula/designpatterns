@@ -2,23 +2,12 @@ import java.util.*;
 
 public interface SearchBehavior {
 
-  public static boolean contains(ArrayList<String> data, String item) {
-
-   int l = 0;
-   int r = data.size() - 1;
-
-   while(l <= r) {
-
-       int m = l + (r - 1) / 2;
-       
-       if(data.get(m) == item) {
-           return true;
-       }
-
-   }
-   
-   return false;
-   
-}   
-   
+    public default boolean contains(ArrayList<String> data, String item) {
+        for(int i = 0; i < data.size(); i++) {
+            if(data.get(i).equalsIgnoreCase(item.toUpperCase())) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

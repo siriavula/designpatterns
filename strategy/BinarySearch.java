@@ -2,20 +2,23 @@ import java.util.*;
 public class BinarySearch implements SearchBehavior {
 
     public boolean contains(ArrayList<String> data, String item) {
-
-        int l = 0;
-        int r = data.size() - 1;
-
-        while(l <= r) {
-
-            int m = l + (r - 1) / 2;
+        int left = 0;
+        int right = data.size() - 1;
+        int middle = left + (right - 1) / 2;
+        int compare = item.compareTo(data.get(middle));
             
-            if(data.get(m) == item) {
-                return true;
-            }
-
+        if(compare == 0) {
+            return true;
         }
-        
+    
+        if(compare > 0) {
+            left = middle + 1;
+        }
+    
+        else {
+            right = middle - 1;
+        }
+            
         return false;
         
     }   

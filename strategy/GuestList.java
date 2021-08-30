@@ -25,8 +25,8 @@ public class GuestList {
         return true;
     }
     
-    public void setSearchBehavior(SearchBehavior searchBehavior) {
-        this.searchBehavior = searchBehavior;
+    public void setSearchBehavior(SearchBehavior aSearchBehavior) {
+        this.searchBehavior = aSearchBehavior;
     }
 
    
