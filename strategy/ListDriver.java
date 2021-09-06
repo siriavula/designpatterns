@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class ListDriver {
     private GuestList gList;

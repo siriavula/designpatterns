@@ -6,29 +6,38 @@ public class GuestList {
     private ArrayList<String> people;
     private SearchBehavior searchBehavior;
 
-    public GuestList(String aTitle) {
-        this.title = aTitle;
+    public GuestList(String title) {
+        this.title = title;
+        this.people = new ArrayList<>();
+        this.searchBehavior = new LinearSearch();
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
+
     public ArrayList<String> getList() {
-        return this.people;
+        return people;
     }
     
-    public boolean add(String aTitle) {
-        return true;  
-    }
-    
-    public boolean remove(String aTitle) {
+    public boolean add(String person) {
+        if(searchBehavior.contains(people, person))
+            return false;  
+
+        people.add(person);
         return true;
     }
     
-    public void setSearchBehavior(SearchBehavior aSearchBehavior) {
-        this.searchBehavior = aSearchBehavior;
-    }
+    public boolean remove(String person) {
+        if(searchBehavior.contains(people, person))
+            return false;  
 
-   
+        people.remove(person);
+        return true;
+    }
+    
+    public void setSearchBehavior(SearchBehavior searchBehavior) {
+        this.searchBehavior = searchBehavior;
+    }
 
 }
