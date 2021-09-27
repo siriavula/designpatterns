@@ -1,7 +1,11 @@
 import java.util.Iterator;
-
+/**
+ * Runs the airline program
+ */
 public class AirlineDriver {
-   
+    /**
+     * Creates flights and displays their details.
+     */
     public AirlineDriver(){
         Airline american = new Airline("American Airlines");
         american.addFlight("477B", "Charlotte", "Seattle", 860, 1);
