@@ -44,18 +44,21 @@ public class TriviaGame {
      * This method allows the user to keep playing the game.
      */
     public void play() {
+        playRound();
+        System.out.println("(P)lay or (Q)uit: ");
         boolean quit = false;
         while(!quit) {
-            System.out.println("(P)lay or (Q)uit: ");
-            String playGame = reader.nextLine();
-            if (playGame.equalsIgnoreCase("p")) {
-                playRound();
-            }
-            else if (playGame.equalsIgnoreCase("q")) {
-                System.out.println("\nYou won " + score + " games!\nGoodbye");
-                System.exit(0);
-            }
-        }
+             String playGame = reader.nextLine();
+             if (playGame.equalsIgnoreCase("p")) {
+                 playRound();
+                 System.out.println("(P)lay or (Q)uit: ");
+                 continue;
+             }
+             else if (playGame.equalsIgnoreCase("q")) {
+                 System.out.println("\nYou won " + score + " games!\nGoodbye");
+                 System.exit(0);
+             }
+         }
         
     }
 
@@ -65,8 +68,8 @@ public class TriviaGame {
      */
     private boolean playRound() {
         int randomQuestion = rand.nextInt(questions.size());
-        this.questions.toString();
         System.out.println(questions.get(randomQuestion));
+        this.questions.toString();
         System.out.println("Enter answer: ");
         int ans = reader.nextInt();
         if(questions.get(randomQuestion).isCorrect(ans)) {

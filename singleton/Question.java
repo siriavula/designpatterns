@@ -25,10 +25,10 @@ public class Question {
         this.question = question;
         this.correctAnswer = correctAnswer;
         this.answers = new String[4];
-        ans1 = answers[0];
-        ans2 = answers[1];
-        ans3 = answers[2];
-        ans4 = answers[3];
+        this.answers[0] = ans1;
+        this.answers[1] = ans2;
+        this.answers[2] = ans3;
+        this.answers[3] = ans4;
     }
 
     /**
