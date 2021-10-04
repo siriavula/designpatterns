@@ -8,7 +8,7 @@ public class Airline {
      */
     private String title;
     private Flight[] flights;
-    private int size;
+    private int size = 0;
 
     /**
      * This method is the constructor for the Airline class.
@@ -16,7 +16,7 @@ public class Airline {
      */
     public Airline(String title) {
         this.title = title;
-        flights = new Flight[5];
+        flights = new Flight[2];
     }
 
     /**
@@ -28,15 +28,10 @@ public class Airline {
      * @param transfers is the number of transfers during the flight.
      */
     public void addFlight(String flightNum, String from, String to, int duration, int transfers) {
-        Flight flight = new Flight(flightNum, from, to, duration, transfers);
-        if (size >= 5) {
-            System.err.println("Sorry, cannot add flight! Flights are full!");
-        } else {
-            growArray(flights);
-            flights[size] = flight;
-            size = size + 1;
-
+        if(size == flights.length) {
+            flights = growArray(flights);
         }
+        flights[size] = new Flight(flightNum, from, to, duration, transfers);
     }
 
     /**
