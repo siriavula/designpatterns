@@ -49,7 +49,7 @@ public class Question {
      * @return returns true if the user's answer is the same as the correct answer.
      */
     public boolean isCorrect(int userAnswer) {
-        if (userAnswer == (correctAnswer+1)) {
+        if ((userAnswer-1) == correctAnswer) {
             return true;
         }
         return false;
@@ -60,6 +60,6 @@ public class Question {
      * @return returns the correct answer as a String.
      */
     public String getCorrectAnswer() {
-        return answers[correctAnswer]; //may need to subtract 1
+        return answers[correctAnswer];
     }
 }

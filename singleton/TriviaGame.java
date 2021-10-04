@@ -69,7 +69,6 @@ public class TriviaGame {
         System.out.println(questions.get(randomQuestion));
         System.out.println("Enter answer: ");
         int ans = reader.nextInt();
-        reader.nextLine();
         if(questions.get(randomQuestion).isCorrect(ans)) {
             System.out.println("YAY! You got it right!");
             score++;
