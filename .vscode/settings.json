@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "singleton",
         "observer",
         "iterator",
         "factory",
         "decorator",
-        "singleton"
+        "state"
     ]
 }
