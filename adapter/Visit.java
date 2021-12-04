@@ -3,6 +3,8 @@ import java.text.SimpleDateFormat;
 
 /**
  * Creates a log of a patients visit
+ * 
+ * @author Siri Avula
  */
 public class Visit {
     private Date date;

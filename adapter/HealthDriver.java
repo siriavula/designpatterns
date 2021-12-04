@@ -4,6 +4,8 @@ import java.util.GregorianCalendar;
 
 /**
  * Gathers Patient data, in medical records, and displays them.
+ * 
+ * @author Siri Avula
  */
 public class HealthDriver {
     public HealthDriver() {

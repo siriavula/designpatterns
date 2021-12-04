@@ -4,6 +4,8 @@ import java.util.Date;
 
 /**
  * A medical record for Carolina Health Patients
+ * 
+ * @author Siri Avula
  */
 public class CarolinaHealthRecord implements HealthRecord {
     private String firstName;

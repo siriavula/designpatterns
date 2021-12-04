@@ -3,6 +3,8 @@ import java.util.Date;
 
 /**
  * Holds the information for a Health Record
+ * 
+ * @author Siri Avula
  */
 public interface HealthRecord {
 
